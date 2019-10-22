@@ -8,10 +8,10 @@ class Wall extends Component {
         }
     }
 
-    componentDidMount() {
-        fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&&api_key=7f077937236d1ffe1a9deeb64a9d2a38&&append_to_response=video,image")
-            .then(response => response.json())
-            .then(data => this.setState({ videos: data.results }));
+    async componentDidMount() {
+        const response = await fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&&api_key=7f077937236d1ffe1a9deeb64a9d2a38&&append_to_response=video,image")
+        const data = await response.json();
+        this.setState({ videos: data.results });
     }
 
     render() {
