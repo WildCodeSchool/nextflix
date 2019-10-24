@@ -8,10 +8,6 @@ img{ display: block;
      background-color:black;
      color:red;
      text-align: center;
-     margin-bottom: 105px;
      text-align: center; 
     
 }
-
-ul {display:inline-table;}
-li {display:inline; }
