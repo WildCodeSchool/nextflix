@@ -1,16 +1,33 @@
 
 /* LES VIDEO */
 
-.video{
-
-    border: 6px inset red;
-    height: 650px;
-    width: 95%;
+iframe{
+    border: 6px inset #fe2020;
+    margin-top: 100px;
 }
 
+.section{
+    display: none;
+    float: none;
+    clear: both;
+    width: 95%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+    display: flex;
+}
 .wall{
-    height: 100vh;
-    overflow: scroll;
+    display: none;
+    float: none;
+    clear: both;
+    width: 95%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+    display: flex;
+    margin: auto;
 }
 
 /***********************************/

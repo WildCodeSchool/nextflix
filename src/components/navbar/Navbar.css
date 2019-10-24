@@ -9,5 +9,5 @@ img{ display: block;
      color:red;
      text-align: center;
      text-align: center; 
-    
+     position: fixed;    
 }

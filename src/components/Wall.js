@@ -38,7 +38,7 @@ class Wall extends Component {
             
                 {this.state.videos.map((video, i) => (
                     <div className="section">
-                        <h2 className="trailertitle">{video.title}</h2>
+                        {/* <h2 className="trailertitle">{video.title}</h2> */}
                         <iframe className="video"
                             width="760" height="515" 
                             src={`https://www.youtube.com/embed/${this.state.trailer[i][0].key}`} 
