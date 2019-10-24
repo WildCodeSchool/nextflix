@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import './Wall.css'; 
+
+
 
 class Wall extends Component {
     constructor(props) {
@@ -9,10 +12,14 @@ class Wall extends Component {
         }
     }
 
+    /* titre */
 
     async componentDidMount() {
         const response = await fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&&api_key=7f077937236d1ffe1a9deeb64a9d2a38&&append_to_response=video,image")
         const data = await response.json();
+        console.log(data);
+
+    /* video */
 
         const trailer=[];
         for(let i=0 ; i < data.results.length; i++){ 
@@ -23,14 +30,16 @@ class Wall extends Component {
         this.setState({ videos: data.results, trailer}); 
     }
 
+    /* regroupe titre video */
+
     render() {
         return (
             <div className="wall">
             
                 {this.state.videos.map((video, i) => (
                     <div className="section">
-                        <h2>{video.title}</h2>
-                        <iframe 
+                        <h2 className="trailertitle">{video.title}</h2>
+                        <iframe className="video"
                             width="760" height="515" 
                             src={`https://www.youtube.com/embed/${this.state.trailer[i][0].key}`} 
                             frameBorder="0" title="The 100" 

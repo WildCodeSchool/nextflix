@@ -1,0 +1,18 @@
+
+/* LES VIDEO */
+
+.video{
+
+    border: 6px inset red;
+    height: 650px;
+    width: 95%;
+}
+
+.wall{
+    height: 100vh;
+    overflow: scroll;
+}
+
+/***********************************/
+
+

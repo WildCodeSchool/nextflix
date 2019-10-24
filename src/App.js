@@ -3,11 +3,12 @@ import Wall from './components/Wall';
 import './App.css';
 
 
+
 function App() {
   return (
-    <div className="App">
-      <Wall/>
-    </div>
+    <div className="app">    
+         <Wall/>
+      </div>
   );
 }
 
