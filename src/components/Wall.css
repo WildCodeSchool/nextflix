@@ -1,35 +1,40 @@
 
 /* LES VIDEO */
 
-iframe{
+.video{
     border: 6px inset #fe2020;
-    margin-top: 100px;
+    margin-top:0.5em;
+    width: 99vw;
+    height: 88vh;
+
+    
 }
 
 .section{
-    display: none;
-    float: none;
-    clear: both;
-    width: 95%;
-    position: relative;
-    padding-bottom: 56.25%;
     padding-top: 25px;
-    height: 0;
-    display: flex;
+
 }
 .wall{
-    display: none;
-    float: none;
-    clear: both;
-    width: 95%;
-    position: relative;
-    padding-bottom: 56.25%;
     padding-top: 25px;
-    height: 0;
     display: flex;
-    margin: auto;
 }
 
 /***********************************/
-
+@media only screen and (max-width: 982px){
+    .video{
+        border: 6px inset red;
+        height: 94.5vh;
+        width: 94vw;
+        margin-top: 0;
+     }
+     .wall{
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+     }
+     body{
+         overflow-x: hidden;
+         overflow-y: visible;
+     }
+ }
 
