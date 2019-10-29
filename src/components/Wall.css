@@ -6,8 +6,6 @@
     margin-top:0.5em;
     width: 99vw;
     height: 88vh;
-
-    
 }
 
 .section{
@@ -23,8 +21,8 @@
 @media only screen and (max-width: 982px){
     .video{
         border: 6px inset red;
-        height: 94.5vh;
-        width: 94vw;
+        height: 50vh;
+        width: 50vw;
         margin-top: 0;
      }
      .wall{
