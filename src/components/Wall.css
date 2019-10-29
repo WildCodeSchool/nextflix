@@ -3,14 +3,19 @@
 
 .video{
 
-    border: 6px inset red;
-    height: 650px;
-    width: 95%;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
 }
 
 .wall{
-    height: 100vh;
+    /*height: 100vh;*/
     overflow: scroll;
+}
+
+.buttondown{
+	position: fixed;
+	bottom: 20px; 
 }
 
 /***********************************/

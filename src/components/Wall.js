@@ -8,7 +8,8 @@ class Wall extends Component {
         super(props);
         this.state = {
             videos: [],
-            trailer:[]
+            trailer:[],
+            scrollIndex: 1
         }
     }
 
@@ -25,9 +26,16 @@ class Wall extends Component {
         for(let i=0 ; i < data.results.length; i++){ 
             const response2 = await fetch(`https://api.themoviedb.org/3/movie/${data.results[i].id}/videos?api_key=7f077937236d1ffe1a9deeb64a9d2a38`)
             const data2 = await response2.json();
-            trailer.push(data2.results);            
+            trailer.push(data2.results);           
         }
-        this.setState({ videos: data.results, trailer}); 
+        this.setState({ videos: data.results, trailer});
+    }
+
+    scrollMovie(){
+        const height = document.querySelector(".video").offsetHeight;
+        this.setState( prevState => ({scrollIndex: prevState.scrollIndex +1}));
+        const positionIndex = this.state.scrollIndex * height;
+        window.scrollTo(0,positionIndex)
     }
 
     /* regroupe titre video */
@@ -35,10 +43,11 @@ class Wall extends Component {
     render() {
         return (
             <div className="wall">
-            
+            <button className="buttondown" onClick={() => this.scrollMovie() }>click me</button>            
                 {this.state.videos.map((video, i) => (
-                    <div className="section">
-                        <h2 className="trailertitle">{video.title}</h2>
+                    <div className="section"
+                    >
+                      {/*<h2 className="trailertitle">{video.title}</h2>$*/}
                         <iframe className="video"
                             width="760" height="515" 
                             src={`https://www.youtube.com/embed/${this.state.trailer[i][0].key}`} 
