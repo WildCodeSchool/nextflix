@@ -31,9 +31,16 @@ class Wall extends Component {
         this.setState({ videos: data.results, trailer});
     }
 
-    scrollMovie(){
+    scrollMovieDown(){
         const height = document.querySelector(".video").offsetHeight;
         this.setState( prevState => ({scrollIndex: prevState.scrollIndex +1}));
+        const positionIndex = this.state.scrollIndex * height;
+        window.scrollTo(0,positionIndex)
+    }
+
+    scrollMovieUp(){
+        const height = document.querySelector(".video").offsetHeight;
+        this.setState( prevState => ({scrollIndex: prevState.scrollIndex -1}));
         const positionIndex = this.state.scrollIndex * height;
         window.scrollTo(0,positionIndex)
     }
@@ -43,7 +50,12 @@ class Wall extends Component {
     render() {
         return (
             <div className="wall">
-            <button className="buttondown" onClick={() => this.scrollMovie() }>click me</button>            
+            <div className="button-down">
+            <button className="buttonDown" onClick={() => this.scrollMovieDown() }><img src="https://i.imgur.com/AJunyFG.png" alt="arrow down" className="arrow-down"></img></button> 
+            </div>
+            <div className="button-up">
+            <button className="buttonUp" onClick={() => this.scrollMovieUp() }><img src="https://i.imgur.com/DcJFbH6.png" alt="arrow down" className="arrow-down"></img></button>
+            </div>            
                 {this.state.videos.map((video, i) => (
                     <div className="section"
                     >

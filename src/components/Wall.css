@@ -13,9 +13,35 @@
     overflow: scroll;
 }
 
-.buttondown{
+.buttonDown{
 	position: fixed;
-	bottom: 20px; 
+	bottom: 120px; 
+}
+
+ .buttonUp{
+ 	position: fixed;
+ 	top: 99px;
+ }
+
+ .button-down{
+ 	float: right;
+ 	min-width: 17vh;
+ }
+
+ .button-up{
+ 	float: right;
+ 	min-width: 374vh;
+ 	position: absolute;
+ }
+
+ .arrow-down {
+    height: 3vh;
+    width: 3vh;
+}
+
+.arrow-up {
+    height: 3vh;
+    width: 3vh;
 }
 
 /***********************************/
