@@ -1,5 +1,5 @@
-import React, { Component } from ' react ';
-import ' ./Wall.css '; 
+import React, { Component } from 'react';
+import './Wall.css'; 
 
 
 
