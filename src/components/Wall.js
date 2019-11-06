@@ -51,10 +51,10 @@ class Wall extends Component {
         return (
             <div className="wall">
             <div className="button-down">
-            <button className="buttonDown" onClick={() => this.scrollMovieDown() }><img src="https://i.imgur.com/AJunyFG.png" alt="arrow down" className="arrow-down"></img></button> 
+            <button className="buttonDown" onClick={() => this.scrollMovieDown() }><img src="https://i.imgur.com/iMNydQb.png"alt="arrow down" className="arrow-down"></img></button> 
             </div>
             <div className="button-up">
-            <button className="buttonUp" onClick={() => this.scrollMovieUp() }><img src="https://i.imgur.com/DcJFbH6.png" alt="arrow down" className="arrow-down"></img></button>
+            <button className="buttonUp" onClick={() => this.scrollMovieUp() }><img src="https://i.imgur.com/yw7ymJE.png" alt="arrow up" className="arrow-up"></img></button>
             </div>            
                 {this.state.videos.map((video, i) => (
                     <div className="section">
