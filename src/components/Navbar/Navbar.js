@@ -6,7 +6,7 @@ function Navbar({ show, changeNavBar }) {
   return (
     <div className="navi">
       <nav>
-        <div 
+        <div
           className={show ? "nburger-show" : "nburger-hidden"} 
           onClick={() => changeNavBar()}
         >
