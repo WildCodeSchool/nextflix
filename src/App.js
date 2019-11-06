@@ -1,15 +1,27 @@
-import React from 'react';
+import React , {Component}from 'react';
 import './App.css';
 import Navbar from './components/navbar/Navbar.js';
 import Wall from './components/Wall';
-function App() {
+
+class App extends Component {
+	constructor(props){
+		super(props)
+		this.state={
+			showNavBar: false
+		}
+	}
+	changeNavBar = () => {
+		this.setState({showNavBar: !this.state.showNavBar})
+	}
+	render(){
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar show={this.state.showNavBar} changeNavBar={this.changeNavBar}/>
       <Wall/>
     </div>
 
   );
+  }
 }
 
 export default App;

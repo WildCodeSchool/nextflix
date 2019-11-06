@@ -1,13 +1,45 @@
-img{ display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
+img{ 
+	display: block;
+    width: 20vw;
+    height: auto;
 }
+
+
 
 .navi{
      background-color:black;
-     color:red;
-     text-align: center;
-     text-align: center; 
+     text-align: left; 
      position: fixed;    
+}
+
+.nburger-hidden{
+	overflow: hidden;
+    width: 2.75vw;
+	position: relative;
+	transition: ease 0.8s;
+}
+
+.nburger-show{
+    width: 100vw;
+	position: relative;
+	transition: ease 1s;
+    overflow: hidden;
+}
+
+.nburger-hidden li{
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    display: inline-flex;
+    float: right;
+    margin: -46px;
+    padding-right: 93px;
+    color: red;
+}
+
+li {
+    padding-left: 84px;
+
 }

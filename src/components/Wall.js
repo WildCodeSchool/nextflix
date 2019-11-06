@@ -8,7 +8,8 @@ class Wall extends Component {
         super(props);
         this.state = {
             videos: [],
-            trailer:[]
+            trailer:[],
+            scrollIndex: 1
         }
     }
 
@@ -25,9 +26,23 @@ class Wall extends Component {
         for(let i=0 ; i < data.results.length; i++){ 
             const response2 = await fetch(`https://api.themoviedb.org/3/movie/${data.results[i].id}/videos?api_key=7f077937236d1ffe1a9deeb64a9d2a38`)
             const data2 = await response2.json();
-            trailer.push(data2.results);            
+            trailer.push(data2.results);           
         }
-        this.setState({ videos: data.results, trailer}); 
+        this.setState({ videos: data.results, trailer});
+    }
+
+    scrollMovieDown(){
+        const height = document.querySelector(".video").offsetHeight;
+        this.setState( prevState => ({scrollIndex: prevState.scrollIndex +1}));
+        const positionIndex = this.state.scrollIndex * height;
+        window.scrollTo(0,positionIndex)
+    }
+
+    scrollMovieUp(){
+        const height = document.querySelector(".video").offsetHeight;
+        this.setState( prevState => ({scrollIndex: prevState.scrollIndex -1}));
+        const positionIndex = this.state.scrollIndex * height;
+        window.scrollTo(0,positionIndex)
     }
 
     /* regroupe titre video */
@@ -35,7 +50,12 @@ class Wall extends Component {
     render() {
         return (
             <div className="wall">
-            
+            <div className="button-down">
+            <button className="buttonDown" onClick={() => this.scrollMovieDown() }><img src="https://i.imgur.com/AJunyFG.png" alt="arrow down" className="arrow-down"></img></button> 
+            </div>
+            <div className="button-up">
+            <button className="buttonUp" onClick={() => this.scrollMovieUp() }><img src="https://i.imgur.com/DcJFbH6.png" alt="arrow down" className="arrow-down"></img></button>
+            </div>            
                 {this.state.videos.map((video, i) => (
                     <div className="section">
                         {/* <h2 className="trailertitle">{video.title}</h2> */}

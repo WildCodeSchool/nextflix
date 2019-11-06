@@ -2,10 +2,9 @@
 /* LES VIDEO */
 
 .video{
-    border: 6px inset #fe2020;
-    margin-top:0.5em;
-    width: 99vw;
-    height: 88vh;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
 }
 
 .section{
@@ -13,8 +12,39 @@
 
 }
 .wall{
-    padding-top: 25px;
-    display: flex;
+    /*height: 100vh;*/
+    overflow: scroll;
+}
+
+.buttonDown{
+	position: fixed;
+	bottom: 120px; 
+}
+
+ .buttonUp{
+ 	position: fixed;
+ 	top: 99px;
+ }
+
+ .button-down{
+ 	float: right;
+ 	min-width: 17vh;
+ }
+
+ .button-up{
+ 	float: right;
+ 	min-width: 374vh;
+ 	position: absolute;
+ }
+
+ .arrow-down {
+    height: 3vh;
+    width: 3vh;
+}
+
+.arrow-up {
+    height: 3vh;
+    width: 3vh;
 }
 
 /***********************************/
