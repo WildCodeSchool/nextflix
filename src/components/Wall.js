@@ -57,9 +57,8 @@ class Wall extends Component {
             <button className="buttonUp" onClick={() => this.scrollMovieUp() }><img src="https://i.imgur.com/DcJFbH6.png" alt="arrow down" className="arrow-down"></img></button>
             </div>            
                 {this.state.videos.map((video, i) => (
-                    <div className="section"
-                    >
-                      {/*<h2 className="trailertitle">{video.title}</h2>$*/}
+                    <div className="section">
+                        {/* <h2 className="trailertitle">{video.title}</h2> */}
                         <iframe className="video"
                             width="760" height="515" 
                             src={`https://www.youtube.com/embed/${this.state.trailer[i][0].key}`} 
