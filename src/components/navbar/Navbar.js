@@ -6,11 +6,9 @@ function Navbar() {
     <div className="navi">
       <nav>
         <img alt="nextflic-logo" src="../../../images/NETFLIX.png" />
-
       </nav>
-        </div>
-    )
-
+    </div>
+  );
 }
 
 export default Navbar;
