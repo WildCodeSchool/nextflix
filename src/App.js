@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Navbar from './components/navbar/Navbar';
-import Wall from './components/Wall';
+import Navbar from './components/Navbar/Navbar';
+import Wall from './components/Wall/Wall';
 
 class App extends Component {
 	constructor(props){
