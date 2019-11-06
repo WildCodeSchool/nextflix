@@ -6,7 +6,7 @@ class Wall extends Component {
     super(props);
     this.state = {
       videos: [],
-      trailer: [],
+      trailers: [],
       scrollIndex: 1,
     };
   }
@@ -27,23 +27,16 @@ class Wall extends Component {
 
     const responses = await Promise.all(promises);
     const datas = await Promise.all(responses.map((res) => res.json()));
-    const trailer = datas.map((d) => d.results);
+    const trailers = datas.map((d) => d.results);
 
-    this.setState({ videos: data.results, trailer });
+    this.setState({ videos: data.results, trailers });
   }
 
-  scrollMovieDown() {
+  scrollMovie(direction) {
+    const num = direction === 'down' ? 1 : -1;
     const { scrollIndex } = this.state;
     const height = document.querySelector('.video').offsetHeight;
-    this.setState((prevState) => ({ scrollIndex: prevState.scrollIndex + 1 }));
-    const positionIndex = scrollIndex * height;
-    window.scrollTo(0, positionIndex);
-  }
-
-  scrollMovieUp() {
-    const { scrollIndex } = this.state;
-    const height = document.querySelector('.video').offsetHeight;
-    this.setState((prevState) => ({ scrollIndex: prevState.scrollIndex - 1 }));
+    this.setState((prevState) => ({ scrollIndex: prevState.scrollIndex + num }));
     const positionIndex = scrollIndex * height;
     window.scrollTo(0, positionIndex);
   }
@@ -51,14 +44,14 @@ class Wall extends Component {
   /* regroupe titre video */
 
   render() {
-    const { videos, trailer } = this.state;
+    const { videos, trailers } = this.state;
     return (
       <div className="wall">
         <div className="button-down">
           <button
             className="buttonDown"
             type="button"
-            onClick={() => this.scrollMovieDown()}
+            onClick={() => this.scrollMovie('down')}
           >
             <img
               src="https://i.imgur.com/iMNydQb.png"
@@ -71,7 +64,7 @@ class Wall extends Component {
           <button
             type="button"
             className="buttonUp"
-            onClick={() => this.scrollMovieUp()}
+            onClick={() => this.scrollMovie('up')}
           >
             <img
               src="https://i.imgur.com/yw7ymJE.png"
@@ -86,10 +79,10 @@ class Wall extends Component {
               className="video"
               width="760"
               height="515"
-              src={`https://www.youtube.com/embed/${trailer[i][0].key}`}
+              src={`https://www.youtube.com/embed/${trailers[i][0].key}`}
               frameBorder="0"
-              title="The 100"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+              title={video.title}
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
           </div>
