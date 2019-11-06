@@ -11,7 +11,6 @@ class App extends Component {
 		}
 	}
 	changeNavBar = () => {
-		console.log("truc bien con")
 		this.setState({showNavBar: !this.state.showNavBar})
 	}
 	render(){
