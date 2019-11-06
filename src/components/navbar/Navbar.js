@@ -1,21 +1,16 @@
 import React from 'react';
 import './Navbar.css';
 
-function Navbar () {
-    return (
+function Navbar() {
+  return (
+    <div className="navi">
+      <nav>
+        <img alt="nextflic-logo" src="../../../images/NETFLIX.png" />
 
-            <div className ='navi'>
-              <nav>
-              
-              <img alt='nextflic-logo' src='../../../images/NETFLIX.png'></img>
+      </nav>
+        </div>
+    )
 
-            
-              
-              </nav>
-          </div>
-        )
-        
-
-    }
+}
 
 export default Navbar;
