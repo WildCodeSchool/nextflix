@@ -47,19 +47,6 @@ class Wall extends Component {
     const { videos, trailers } = this.state;
     return (
       <div className="wall">
-        <div className="button-down">
-          <button
-            className="buttonDown"
-            type="button"
-            onClick={() => this.scrollMovie('down')}
-          >
-            <img
-              src="https://i.imgur.com/iMNydQb.png"
-              alt="arrow down"
-              className="arrow-down"
-            />
-          </button>
-        </div>
         <div className="button-up">
           <button
             type="button"
@@ -67,9 +54,22 @@ class Wall extends Component {
             onClick={() => this.scrollMovie('up')}
           >
             <img
-              src="https://i.imgur.com/yw7ymJE.png"
+              src="https://i.imgur.com/iMNydQb.png"
               alt="arrow up"
               className="arrow-up"
+            />
+          </button>
+        </div>
+        <div className="button-down">
+          <button
+            className="buttonDown"
+            type="button"
+            onClick={() => this.scrollMovie('down')}
+          >
+            <img
+              src="https://i.imgur.com/yw7ymJE.png"
+              alt="arrow down"
+              className="arrow-down"
             />
           </button>
         </div>
