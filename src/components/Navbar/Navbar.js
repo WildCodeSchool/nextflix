@@ -15,7 +15,7 @@ function Navbar({ show, changeNavBar }) {
             <li>Movies</li>
             <li>Series</li>
             <li>My Favorite</li>
-            <li><a href="https://i.imgur.com/RDj51x8.mp4"></a>Credit</li>
+            <li>Credit</li>
           </ul>
         </div>
       </nav>
