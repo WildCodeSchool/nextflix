@@ -1,7 +1,8 @@
-img{ 
-	display: block;
-    width: 20vw;
+img {
+    display: block;
+    width: 23vw;
     height: auto;
+    margin-top: -35px;
 }
 
 
@@ -17,6 +18,7 @@ img{
     width: 2.75vw;
 	position: relative;
 	transition: ease 0.8s;
+    height: 79px;
 }
 
 .nburger-show{
@@ -24,6 +26,7 @@ img{
 	position: relative;
 	transition: ease 1s;
     overflow: hidden;
+    height: 79px;
 }
 
 .nburger-hidden li{
@@ -34,8 +37,8 @@ ul {
     list-style-type: none;
     display: inline-flex;
     float: right;
-    margin: -46px;
-    padding-right: 93px;
+    margin: -159px;
+    padding-right: 204px;
     color: red;
 }
 
