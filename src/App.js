@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Wall from './components/Wall/Wall';
-import Counter from './components/Hook/Counter';
+
 
 class App extends Component {
 	constructor(props){
@@ -18,7 +18,7 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Navbar show={this.state.showNavBar} changeNavBar={this.changeNavBar}/>
-				<Counter />
+			
 				<Wall/>
 			</div>
   		);

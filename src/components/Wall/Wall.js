@@ -16,6 +16,7 @@ class Wall extends Component {
   async componentDidMount() {
     const response = await fetch('https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&&api_key=7f077937236d1ffe1a9deeb64a9d2a38&&append_to_response=video,image');
     const data = await response.json();
+    console.log(data);
 
     /* video */
 
@@ -84,6 +85,10 @@ class Wall extends Component {
               title={video.title}
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+            />
+            <img
+              src={`https://image.tmdb.org/t/p/w500/${video.poster_path}`}
+              alt="img"
             />
           </div>
         ))}
