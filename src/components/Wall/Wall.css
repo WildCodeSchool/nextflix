@@ -2,16 +2,11 @@
 /* LES VIDEO */
 
 .video {
-    height: 88vh;
+    height: 99vh;
     width: 60%;
     float: left;
-    margin-top: 76px;
 }
 
-/* .section {
-    padding-top: 68px;
-
-} */
 .wall{
     overflow: scroll;
 }
