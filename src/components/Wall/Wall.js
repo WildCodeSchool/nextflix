@@ -41,39 +41,12 @@ class Wall extends Component {
     const positionIndex = scrollIndex * height;
     window.scrollTo(0, positionIndex);
   }
-
   /* regroupe titre video */
 
   render() {
     const { videos, trailers } = this.state;
     return (
       <div className="wall">
-        <div className="button-up">
-          <button
-            type="button"
-            className="buttonUp"
-            onClick={() => this.scrollMovie('up')}
-          >
-            <img
-              src="https://i.imgur.com/3LEHIRr.png"
-              alt="arrow up"
-              className="arrow-up"
-            />
-          </button>
-        </div>
-        <div className="button-down">
-          <button
-            className="buttonDown"
-            type="button"
-            onClick={() => this.scrollMovie('down')}
-          >
-            <img
-              src="https://i.imgur.com/TztPIB9.png"
-              alt="arrow down"
-              className="arrow-down"
-            />
-          </button>
-        </div>
         {videos.map((video, i) => (
           <div className="section">
             <iframe
