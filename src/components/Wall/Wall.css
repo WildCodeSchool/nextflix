@@ -1,11 +1,11 @@
 
 /* LES VIDEO */
 
-.video{
-    height: 100vh;
+.video {
+    height: 88vh;
     width: 60%;
-    margin: 0;
     float: left;
+    margin-top: 76px;
 }
 
 /* .section {
@@ -20,7 +20,7 @@
 .buttonDown{
     border: none;
     background: rgba(255,255,255,0);
-	position: fixed;
+    position: fixed;
     bottom: 50px; 
     right: 50px;
 
@@ -29,21 +29,21 @@
  .buttonUp{
     border: none;
     background: rgba(255,255,255,0);
- 	position: fixed;
+    position: fixed;
      top: 95px;
      right: 50px;
  }
 
  .button-down{
- 	float: right;
+    float: right;
      min-width: 17vh;
      margin: 0%;
  }
 
  .button-up{
- 	float: right;
- 	min-width: 364vh;
- 	position: absolute;
+    float: right;
+    min-width: 364vh;
+    position: absolute;
  }
 
  .arrow-down {
