@@ -1,6 +1,5 @@
 
 /* LES VIDEO */
-
 .video{
     padding: 0.5em;
     margin: 0.5em;
@@ -27,46 +26,54 @@
     font-size: medium;
     margin: 0.5em;
 }
-
 .section{
     padding-top: 5%;
     display: flex;
-
 }
 .wall{
     height: 100vh;
-    overflow: scroll;
 }
 
+/* bouton */
 .buttonDown{
-	position: fixed;
-	bottom: 120px; 
+    border: none;
+    background: rgba(255,255,255,0);
+    position: fixed;
+    bottom: 50px; 
+    right: 50px;
+
 }
 
  .buttonUp{
- 	position: fixed;
- 	top: 99px;
+    border: none;
+    background: rgba(255,255,255,0);
+    position: fixed;
+     top: 95px;
+     right: 50px;
  }
 
  .button-down{
- 	float: right;
- 	min-width: 17vh;
+    float: right;
+     min-width: 17vh;
+     margin: 0%;
  }
 
  .button-up{
- 	float: right;
- 	min-width: 374vh;
- 	position: absolute;
+    float: right;
+    min-width: 364vh;
+    position: absolute;
  }
 
  .arrow-down {
-    height: 3vh;
-    width: 3vh;
+    height: 4vh;
+    width: 4vh;
 }
 
+
+
 .arrow-up {
-    height: 3vh;
-    width: 3vh;
+    height: 4vh;
+    width: 4vh;
 }
 
 /***********************************/

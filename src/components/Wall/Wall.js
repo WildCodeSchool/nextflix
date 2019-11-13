@@ -11,6 +11,7 @@ class Wall extends Component {
     };
   }
 
+
   /* titre */
 
   async componentDidMount() {
@@ -55,7 +56,7 @@ class Wall extends Component {
             onClick={() => this.scrollMovie('up')}
           >
             <img
-              src="https://i.imgur.com/iMNydQb.png"
+              src="https://i.imgur.com/3LEHIRr.png"
               alt="arrow up"
               className="arrow-up"
             />
@@ -68,7 +69,7 @@ class Wall extends Component {
             onClick={() => this.scrollMovie('down')}
           >
             <img
-              src="https://i.imgur.com/yw7ymJE.png"
+              src="https://i.imgur.com/TztPIB9.png"
               alt="arrow down"
               className="arrow-down"
             />
