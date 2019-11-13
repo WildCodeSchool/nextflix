@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Wall from './components/Wall/Wall';
 import ModalPage from './components/ModalPage/ModalPage';
 
+
 class App extends Component {
   constructor(props){
     super(props)
