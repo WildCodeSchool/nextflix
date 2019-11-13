@@ -19,7 +19,7 @@ class ModalPage extends Component {
 		const { open } = this.state;
 		return(
 			<div>
-				<h1 className="credit-video" onClick={this.onOpenModal}>Credit</h1>
+				<h1 className="credit-video" onClick={this.onOpenModal}>Crédits</h1>
 				<Modal open={ open } onClose={this.onCloseModal} little>
 				<Credit />
 				</Modal>
