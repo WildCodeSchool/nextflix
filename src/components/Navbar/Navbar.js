@@ -11,7 +11,7 @@ function Navbar({ show, changeNavBar }) {
           className={show ? "nburger-show" : "nburger-hidden"} 
           onClick={() => changeNavBar()}
         >      
-        <img alt="nextflic-logo" src="https://i.imgur.com/fAwtw8J.png" />
+        <img className="nav__picture" alt="nextflic-logo" src="https://i.imgur.com/fAwtw8J.png" />
         <ModalPage />       
         </div>        
       </nav>

@@ -1,5 +1,6 @@
 
 /* LES VIDEO */
+
 .video{
     padding: 0.5em;
     margin: 0.5em;
@@ -26,50 +27,49 @@
     font-size: medium;
     margin: 0.5em;
 }
+
 .section{
     padding-top: 5%;
     display: flex;
+
 }
 .wall{
     height: 100vh;
+    overflow: scroll;
 }
 
-/* bouton */
 .buttonDown{
-    border: none;
-    background: rgba(255,255,255,0);
-    position: fixed;
-    bottom: 50px; 
+	position: fixed;
+    border:none;
+    background: black;
+    bottom: 50px;
     right: 50px;
-
 }
 
  .buttonUp{
-    border: none;
-    background: rgba(255,255,255,0);
-    position: fixed;
+ 	position: fixed;
      top: 95px;
+     border:none;
+     background: black;
      right: 50px;
  }
 
  .button-down{
-    float: right;
+ 	float: right;
      min-width: 17vh;
      margin: 0%;
  }
 
  .button-up{
-    float: right;
-    min-width: 364vh;
-    position: absolute;
+ 	float: right;
+ 	min-width: 374vh;
+ 	position: absolute;
  }
 
  .arrow-down {
     height: 4vh;
     width: 4vh;
 }
-
-
 
 .arrow-up {
     height: 4vh;
