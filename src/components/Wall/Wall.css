@@ -6,14 +6,14 @@
     width: 50%;
     margin-top: 0em;
 }
+
 .section__synopsis{
     background: black;
     color: blanchedalmond;
     display: flex;
     width: 50%;
     height: 85.5vh;
-    margin-top: 0em;
-
+    margin-top: 0;
 }
 
 .section__picture{
@@ -35,7 +35,6 @@
     font-size: medium;
     margin: 0.5em;
 }
-
 .section{
     margin-top: 5%;
     display: flex;
@@ -45,44 +44,32 @@
     height: 100vh;
     overflow: scroll;
 }
-
-.buttonDown{
-	position: fixed;
-    border:none;
-    background: black;
-    bottom: 50px;
-    right: 50px;
+.info--show{
+    transition: ease 0.3s;
+    opacity: 1;
 }
-
- .buttonUp{
- 	position: fixed;
-     top: 95px;
-     border:none;
-     background: black;
-     right: 50px;
- }
-
- .button-down{
- 	float: right;
-     min-width: 17vh;
-     margin: 0%;
- }
-
- .button-up{
- 	float: right;
- 	min-width: 374vh;
- 	position: absolute;
- }
-
- .arrow-down {
-    height: 4vh;
-    width: 4vh;
+.info--hidden{
+    opacity: 0;
+    height: 0px;
+    transition: ease 0.3s;
+    margin-top: -50px;
+    width: 80vw;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 25px;
+    box-sizing: border-box;
 }
-
-.arrow-up {
-    height: 4vh;
-    width: 4vh;
-}
+.info--button{
+      font-size: 36px;
+      color:rgb(204, 35, 35);
+      border:none;
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      bottom:25px;
+      transform: translate(-50%,50%);
+      z-index: 2;
+  }
 
 /***********************************/
 @media only screen and (max-width: 982px){
