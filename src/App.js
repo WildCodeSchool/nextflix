@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* <Switch>
+      <Switch>
         <Route exact path="/" component={Wall} />
         <Route path="/credits" component={Home} />
-      </Switch> */}
+      </Switch>
     </div>
   );
 }

@@ -1,5 +1,9 @@
 @import '~normalize.css';
 
+:root {
+    --Navbar-height: 3.125rem;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -10,4 +14,5 @@ html {
 
 body {
     font: 100%/1.5 system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+    background-color: #000;
 }

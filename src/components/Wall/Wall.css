@@ -1,3 +1,27 @@
 .wall {
-    display: none;
+    height: calc(100vh - var(--Navbar-height));
+    overflow-y: scroll;
+    background-image: url('./background.min.jpg');
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: center -35px;
+}
+
+.section {
+    padding: 1.5rem;
+}
+
+.video-container {
+    position: relative; 
+    width: 100%; 
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */ 
+}
+
+.video {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    width: 100%;
 }

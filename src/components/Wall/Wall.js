@@ -49,16 +49,16 @@ class Wall extends Component {
       <div className="wall">
         {videos.map((video, i) => (
           <div className="section">
-            <iframe
-              className="video"
-              width="760"
-              height="515"
-              src={`https://www.youtube.com/embed/${trailers[i][0].key}`}
-              frameBorder="0"
-              title={video.title}
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            <div className="video-container">
+              <iframe
+                className="video"
+                src={`https://www.youtube.com/embed/${trailers[i][0].key}`}
+                frameBorder="0"
+                title={video.title}
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
         ))}
       </div>
