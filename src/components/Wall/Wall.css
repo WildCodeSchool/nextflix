@@ -9,11 +9,11 @@
     margin-top: 0;
 }
 .video {
-    height: 43vh;
-    width: 41%;
-    margin: 121px;
-    margin-left: 121px;
-    margin-left: 89px;
+    height: 58vh;
+    width: 55%;
+    margin: 200px;
+    margin-left: 156px;
+    margin-top: 131px;
 }
 
 /* .section {
@@ -24,8 +24,9 @@
     overflow: scroll;
     margin:0;
     padding:0;
-    background: url("https://i.imgur.com/xNk6hne.jpg") no-repeat center fixed; 
-    background-size: cover; 
+    background: url("./backgroundNextflick.min.jpg") no-repeat center fixed; 
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
 }
 
 .section__picture{
