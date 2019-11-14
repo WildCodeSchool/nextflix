@@ -1,0 +1,32 @@
+.home-video {
+    width: -moz-available;
+    display: inline-flex;
+}
+
+.ecran-video {
+    position: relative;
+    bottom: 61vh;
+    left: 55%;
+    width: 13%;
+    cursor: pointer;
+    transform: rotate(2deg);
+}
+
+span {
+    position: relative;
+    bottom: 67vh;
+    left: 230px;
+    font-size: 36%;
+    color: 
+    #000;
+}
+
+.styles_modal__gNwvD {
+    width: 6%;
+    height: 14%;
+    margin-top: 28%;
+    background: none;
+}
+
+
+
