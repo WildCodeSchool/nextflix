@@ -2,30 +2,34 @@
 /* LES VIDEO */
 
 .video{
-    padding: 0.5em;
-    margin: 0.5em;
-    height: 100vh;
+    height: 85.5vh;
     width: 50%;
-    margin: 0;
+    margin-top: 0em;
 }
 .section__synopsis{
+    background: black;
     color: blanchedalmond;
     display: flex;
     width: 50%;
-    border: white 3px groove;
-    padding: 0.5em;
-    margin: 0.5em;
-    font-size: x-large;
-}
-.section__picture{
-    height: 50%;
-}
-.section__boxPicture{
-    margin: 0%;
+    height: 85.5vh;
+    margin-top: 0em;
 
 }
+
+.section__picture{
+    height: 60%;
+    margin: 3%;
+}
+.section__boxPicture{
+    height: 100vh;
+    width: 50%;
+    margin: 0%;
+}
+
 .section__synopsis__oveview{
-    padding: 0.5em;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 1em;
 }
 .section__boxPicture__releaseDate{
     font-size: medium;
@@ -33,9 +37,9 @@
 }
 
 .section{
-    padding-top: 5%;
+    margin-top: 5%;
     display: flex;
-
+    border: #fe2020 3px groove;
 }
 .wall{
     height: 100vh;
@@ -85,14 +89,31 @@
     .video{
         border: 6px inset red;
         height: 50vh;
-        width: 50vw;
+        width: 96vw;
         margin-top: 0;
      }
-     .wall{
+     .section{
         display: flex;
         flex-direction: column;
         padding-top: 0;
      }
+     .section__picture{
+         width: 30vw;
+         height: 30vh;
+     }
+
+    .section__synopsis{
+        height: 50vh;
+        width: 98vw;
+    }    
+    
+    .section__synopsis__oveview{
+        font-size: 10px;
+        white-space: normal;
+    }
+    .section__boxPicture__releaseDate{
+        font-size: 10px;
+    }
      body{
          overflow-x: hidden;
          overflow-y: visible;

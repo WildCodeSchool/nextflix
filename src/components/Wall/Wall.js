@@ -75,6 +75,7 @@ class Wall extends Component {
                 {video.overview}
                 </p>
               </div>
+
             </div>  
           </div>
         ))}
