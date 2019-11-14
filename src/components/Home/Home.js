@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ModalPage from '../ModalPage/ModalPage';
 import Modal from 'react-responsive-modal';
 import Credit2 from '../Credit/Credit2';
 import './Home.css';

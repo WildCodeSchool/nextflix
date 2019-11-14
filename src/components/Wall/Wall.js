@@ -8,6 +8,7 @@ class Wall extends Component {
       videos: [],
       trailers: [],
       scrollIndex: 1,
+      showInfo:false,
     };
   }
 
@@ -17,6 +18,7 @@ class Wall extends Component {
   async componentDidMount() {
     const response = await fetch('https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&&api_key=7f077937236d1ffe1a9deeb64a9d2a38&&append_to_response=video,image');
     const data = await response.json();
+    console.log(data);
 
     /* video */
 
@@ -32,19 +34,14 @@ class Wall extends Component {
 
     this.setState({ videos: data.results, trailers });
   }
-
-  scrollMovie(direction) {
-    const num = direction === 'down' ? 1 : -1;
-    const { scrollIndex } = this.state;
-    const height = document.querySelector('.video').offsetHeight;
-    this.setState((prevState) => ({ scrollIndex: prevState.scrollIndex + num }));
-    const positionIndex = scrollIndex * height;
-    window.scrollTo(0, positionIndex);
+  info = () => {
+    console.log('info')
+    this.state.showInfo ? this.setState({showInfo:false}):this.setState({showInfo:true})
   }
   /* regroupe titre video */
 
   render() {
-    const { videos, trailers } = this.state;
+    const { videos, trailers, showInfo } = this.state;
     return (
       <div className="wall">
         {videos.map((video, i) => (
@@ -59,6 +56,29 @@ class Wall extends Component {
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
+            <button 
+              onClick={e => this.info()} 
+              className="info--button"
+            >
+            I
+            </button>
+            <div className={showInfo ? "info--show":"info--hidden"}>
+              <div className="section__synopsis">
+                <div className="section__boxPicture">
+                  <img
+                    className="section__picture"
+                    src={`https://image.tmdb.org/t/p/w500/${video.poster_path}`}
+                    alt="img"
+                  />
+                  <p className="section__boxPicture__releaseDate">Sortie le {video.release_date}</p>
+                </div>
+                <div className="section__synopsis__oveview">
+                  <p>
+                  {video.overview}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </div>

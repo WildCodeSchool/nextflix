@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Wall from './components/Wall/Wall';
 
+
 class App extends Component {
   constructor(props){
     super(props)

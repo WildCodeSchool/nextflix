@@ -1,6 +1,13 @@
 
 /* LES VIDEO */
-
+.section__synopsis{
+    background: black;
+    color: blanchedalmond;
+    display: flex;
+    width: 50%;
+    height: 85.5vh;
+    margin-top: 0;
+}
 .video {
     height: 58vh;
     width: 55%;
@@ -22,47 +29,59 @@
     background-size: cover; /* version standardisée */
 }
 
-/* bouton */
-.buttonDown{
-    border: none;
-    background: rgba(255,255,255,0);
-    position: fixed;
-    bottom: 50px; 
-    right: 50px;
-
+.section__picture{
+    height: 60%;
+    margin: 3%;
+}
+.section__boxPicture{
+    height: 100vh;
+    width: 50%;
+    margin: 0%;
 }
 
- .buttonUp{
-    border: none;
-    background: rgba(255,255,255,0);
-    position: fixed;
-     top: 95px;
-     right: 50px;
- }
-
- .button-down{
-    float: right;
-     min-width: 17vh;
-     margin: 0%;
- }
-
- .button-up{
-    float: right;
-    min-width: 364vh;
-    position: absolute;
- }
-
- .arrow-down {
-    height: 4vh;
-    width: 4vh;
+.section__synopsis__oveview{
+    font-size: 20px;
+    text-align: left;
+    margin-left: 1em;
 }
-
-
-
-.arrow-up {
-    height: 4vh;
-    width: 4vh;
+.section__boxPicture__releaseDate{
+    font-size: medium;
+    margin: 0.5em;
 }
+.section{
+    margin-top: 5%;
+    display: flex;
+}
+.wall{
+    height: 100vh;
+    overflow: scroll;
+}
+.info--show{
+    transition: ease 0.3s;
+    opacity: 1;
+}
+.info--hidden{
+    opacity: 0;
+    height: 0px;
+    transition: ease 0.3s;
+    margin-top: -50px;
+    width: 80vw;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 25px;
+    box-sizing: border-box;
+}
+.info--button{
+      font-size: 36px;
+      color:rgb(204, 35, 35);
+      border:none;
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      bottom:25px;
+      transform: translate(-50%,50%);
+      z-index: 2;
+  }
 
 
 /***********************************/
@@ -70,14 +89,31 @@
     .video{
         border: 6px inset red;
         height: 50vh;
-        width: 50vw;
+        width: 96vw;
         margin-top: 0;
      }
-     .wall{
+     .section{
         display: flex;
         flex-direction: column;
         padding-top: 0;
      }
+     .section__picture{
+         width: 30vw;
+         height: 30vh;
+     }
+
+    .section__synopsis{
+        height: 50vh;
+        width: 98vw;
+    }    
+    
+    .section__synopsis__oveview{
+        font-size: 10px;
+        white-space: normal;
+    }
+    .section__boxPicture__releaseDate{
+        font-size: 10px;
+    }
      body{
          overflow-x: hidden;
          overflow-y: visible;

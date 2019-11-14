@@ -18,6 +18,7 @@ function Navbar({ show, changeNavBar }) {
         <NavLink exact activeClassName="active"to="/">Wall</NavLink>
         <NavLink exact activeClassName="active"to="/credits">Crédits</NavLink>
         </div>    
+
         </div>
       </nav>
     </div>
