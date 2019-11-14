@@ -38,7 +38,6 @@ class Wall extends Component {
     console.log('info')
     this.state.showInfo ? this.setState({showInfo:false}):this.setState({showInfo:true})
   }
-
   /* regroupe titre video */
 
   render() {

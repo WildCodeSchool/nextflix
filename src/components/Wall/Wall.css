@@ -1,12 +1,12 @@
 
 /* LES VIDEO */
 
-.video{
-    padding: 0.5em;
-    margin: 0.5em;
-    height: 100vh;
-    width: 100%;
-    margin: 0;
+.video {
+    height: 43vh;
+    width: 41%;
+    margin: 121px;
+    margin-left: 121px;
+    margin-left: 89px;
 }
 .section__synopsis{
     color: blanchedalmond;
@@ -38,6 +38,11 @@
 .wall{
     height: 100vh;
     overflow: scroll;
+    margin:0;
+    padding:0;
+    background: url("https://i.imgur.com/xNk6hne.jpg") no-repeat center fixed; 
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
 }
 .info--show{
     transition: ease 0.3s;
@@ -65,6 +70,7 @@
       transform: translate(-50%,50%);
       z-index: 2;
   }
+
 
 /***********************************/
 @media only screen and (max-width: 982px){
