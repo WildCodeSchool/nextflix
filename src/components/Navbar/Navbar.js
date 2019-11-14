@@ -10,19 +10,19 @@ function Navbar({ show, changeNavBar }) {
     <div className="navi">
       <nav>
         <div
-          className={show ? "nburger-show" : "nburger-hidden"} 
+          className={show ? "nburger-show" : "nburger-hidden"}
           onClick={() => changeNavBar()}
-        >      
-        <img alt="nextflic-logo" src="https://i.imgur.com/fAwtw8J.png" />
-        <ModalPage />
-        <Wall />
-        <div className="nav">
-        <NavLink exact activeClassName="active"to="/">Wall</NavLink>
-        <NavLink activeClassName="active"to="/Crédits">Crédits</NavLink>
-        </div>    
-        </div>        
+        >
+          <img className="nav__picture" alt="nextflic-logo" src="https://i.imgur.com/fAwtw8J.png" />
+          <ModalPage />
+          <Wall />
+          <div className="nav">
+            <NavLink exact activeClassName="active" to="/">Wall</NavLink>
+            <NavLink activeClassName="active" to="/Crédits">Crédits</NavLink>
+          </div>
+        </div>
       </nav>
-    </div>    
+    </div>
   );
 }
 

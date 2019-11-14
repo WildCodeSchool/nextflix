@@ -63,23 +63,22 @@ class Wall extends Component {
             I
             </button>
             <div className={showInfo ? "info--show":"info--hidden"}>
-            <div className="section__synopsis">
-              <div className="section__boxPicture">
-                <img
-                  className="section__picture"
-                  src={`https://image.tmdb.org/t/p/w500/${video.poster_path}`}
-                  alt="img"
-                />
-                <p className="section__boxPicture__releaseDate">Sortie le {video.release_date}</p>
+              <div className="section__synopsis">
+                <div className="section__boxPicture">
+                  <img
+                    className="section__picture"
+                    src={`https://image.tmdb.org/t/p/w500/${video.poster_path}`}
+                    alt="img"
+                  />
+                  <p className="section__boxPicture__releaseDate">Sortie le {video.release_date}</p>
+                </div>
+                <div className="section__synopsis__oveview">
+                  <p>
+                  {video.overview}
+                  </p>
+                </div>
               </div>
-              <div className="section__synopsis__oveview">
-                <p>
-                {video.overview}
-                </p>
-              </div>
-            </div> 
-            
-            </div> 
+            </div>
           </div>
         ))}
       </div>
