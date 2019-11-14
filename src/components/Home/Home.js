@@ -23,6 +23,7 @@ class Home extends Component {
 		return(
 			<div className="home">
 				<img className="home-video" src="https://i.imgur.com/IvYNfQW.jpg" alt="salle de cinema"/>
+				<ModalPage />
 				<img  className="ecran-video" onClick={this.onOpenModal} src="https://i.imgur.com/rVFuPT4.png" alt="ecran de cinema"/>
 				<span>Click me</span>
 				<Modal open={ open } onClose={this.onCloseModal} little>

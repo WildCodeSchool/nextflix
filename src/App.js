@@ -20,9 +20,10 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar show={this.state.showNavBar} changeNavBar={this.changeNavBar}/>
+        <ModalPage />
         <Switch>
           <Route exact path="/" component={Wall}/>
-          <Route exact path="/Crédits" component={Home}/>
+          <Route path="/credits" component={Home}/>
         </Switch>                
       </div>
       );
