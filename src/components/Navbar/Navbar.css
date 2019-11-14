@@ -1,57 +1,64 @@
-img {
-    display: block;
-    width: 23vw;
-    height: auto;
-    margin-top: -35px;
-}
-
-.navi{
-     background-color:black;
-     text-align: left; 
-     position: fixed;
-     cursor: pointer;  
-}
-
-.nburger-hidden{
+.Navbar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: .3125rem;
+    background-color: #000;
     overflow: hidden;
-    width: 2.75vw;
-    position: relative;
     transition: ease 0.8s;
-    height: 79px;
 }
 
-.nburger-show{
-    width: 100vw;
-    position: relative;
-    transition: ease 1s;
-    overflow: hidden;
-    height: 79px;
-}
-
-
-.credit-video {
-    text-align: right;
-    margin-top: -163px;
-    margin-right: 30px;
-    margin-left: 300px;
+.Navbar__button {
+    background-color: transparent;
+    appearance: none;
+    border: none;
     cursor: pointer;
 }
 
-
-.credit {
-    font-size: 18px;
+.Navbar__logo {
+    display: block;
+    height: 2.5rem;
 }
 
-.nav {
-    margin-top: -164px;
-    margin-left: 37em;
+.Navbar__list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
-a {
-    color: red;
+.Navbar__list--hidden {
+    display: none;
+}
+
+.Navbar__link {
+    font-size: 1.25rem;
+    padding: .3125rem .5rem;
     text-decoration: none;
-    margin-right: 30px;
+    color: red;
 }
 
+.Navbar__link:hover {
+    color: darkred;
+}
 
+@media screen and (min-width: 48em) {
+    .Navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
+    .Navbar__list {
+        flex-direction: row;
+    }
+
+    .Navbar__list--hidden {
+        display: flex;
+    }
+
+    .Navbar--hidden {
+        width: 2.2rem;
+    }
+}

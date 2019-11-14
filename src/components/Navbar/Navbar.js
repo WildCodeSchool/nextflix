@@ -1,27 +1,41 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Navbar.css';
 import { NavLink } from 'react-router-dom';
-import ModalPage from '../ModalPage/ModalPage';
-import Wall from '../Wall/Wall';
+import logo from './logo-nextflick.png';
 
+class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showNavBar: true
+    };
+  }
 
-function Navbar({ show, changeNavBar }) {
-  return (
-    <div className="navi">
-      <nav>
-        <div
-          className={show ? "nburger-show" : "nburger-hidden"} 
-          onClick={() => changeNavBar()}
-        >      
-        <img alt="nextflic-logo" src="https://i.imgur.com/fAwtw8J.png" />
-        <div className="nav">
-        <NavLink exact activeClassName="active"to="/">Wall</NavLink>
-        <NavLink exact activeClassName="active"to="/credits">Crédits</NavLink>
-        </div>    
-        </div>        
+  changeNavBar = () => {
+    this.setState(prevState => ({ showNavBar: !prevState.showNavBar }));
+  };
+
+  render() {
+    const { showNavBar } = this.state;
+
+    return (
+      <nav
+        className={`Navbar ${!showNavBar ? 'Navbar--hidden' : ''}`}
+      >
+        <button type="button" className="Navbar__button" onClick={this.changeNavBar}>
+          <img className="Navbar__logo" alt="Logo de l'application Nextflick" src={logo} />
+        </button>
+        <div className={`Navbar__list ${showNavBar ? 'Navbar__list--hidden' : ''}`}>
+          <NavLink exact to="/" className="Navbar__link" activeClassName="Navbar__link--active">
+            Wall
+          </NavLink>
+          <NavLink exact to="/credits" className="Navbar__link" activeClassName="Navbar__link--active">
+            Crédits
+          </NavLink>
+        </div>
       </nav>
-    </div>    
-  );
+    );
+  }
 }
 
 export default Navbar;
