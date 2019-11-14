@@ -9,7 +9,7 @@
      background-color:black;
      text-align: left; 
      position: fixed;
-     cursor: pointer;   
+     cursor: pointer;  
 }
 
 .nburger-hidden{
@@ -31,8 +31,27 @@
 
 .credit-video {
     text-align: right;
-    margin-top: -170px;
-    margin-right: 156px;
+    margin-top: -163px;
+    margin-right: 30px;
     margin-left: 300px;
     cursor: pointer;
 }
+
+
+.credit {
+    font-size: 18px;
+}
+
+.nav {
+    margin-top: -439em;
+    margin-left: 37em;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+
+

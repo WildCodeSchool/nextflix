@@ -1,12 +1,5 @@
 
 /* LES VIDEO */
-
-.video{
-    height: 85.5vh;
-    width: 50%;
-    margin-top: 0em;
-}
-
 .section__synopsis{
     background: black;
     color: blanchedalmond;
@@ -14,6 +7,25 @@
     width: 50%;
     height: 85.5vh;
     margin-top: 0;
+}
+.video {
+    height: 43vh;
+    width: 41%;
+    margin: 121px;
+    margin-left: 121px;
+    margin-left: 89px;
+}
+
+/* .section {
+    padding-top: 68px;
+
+} */
+.wall{
+    overflow: scroll;
+    margin:0;
+    padding:0;
+    background: url("https://i.imgur.com/xNk6hne.jpg") no-repeat center fixed; 
+    background-size: cover; 
 }
 
 .section__picture{
@@ -70,6 +82,7 @@
       transform: translate(-50%,50%);
       z-index: 2;
   }
+
 
 /***********************************/
 @media only screen and (max-width: 982px){
