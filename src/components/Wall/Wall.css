@@ -6,7 +6,7 @@
     width: 55%;
     margin: 200px;
     margin-left: 156px;
-    margin-top: 58px;
+    margin-top: 131px;
 }
 
 /* .section {
@@ -17,7 +17,7 @@
     overflow: scroll;
     margin:0;
     padding:0;
-    background: url("./backgroundwall.min.jpg") no-repeat center fixed; 
+    background: url("./backgroundNextflick.min.jpg") no-repeat center fixed; 
     -webkit-background-size: cover; /* pour anciens Chrome et Safari */
     background-size: cover; /* version standardisée */
 }
