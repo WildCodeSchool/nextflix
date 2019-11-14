@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import {Switch,Route} from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
-import ModalPage from './components/ModalPage/ModalPage';
 import Home from './components/Home/Home';
 import Wall from './components/Wall/Wall';
 
@@ -20,7 +19,6 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar show={this.state.showNavBar} changeNavBar={this.changeNavBar}/>
-        <ModalPage />
         <Switch>
           <Route exact path="/" component={Wall}/>
           <Route path="/credits" component={Home}/>
