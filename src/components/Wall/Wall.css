@@ -4,7 +4,7 @@
     background-image: url('./background.min.jpg');
     background-size: 150%;
     background-repeat: no-repeat;
-    background-position: center -35px;
+    background-position: center -40px;
 }
 
 .section {
@@ -24,4 +24,37 @@
     bottom: 0; 
     right: 0;
     width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 33em) {
+    .wall {
+        background-size: 160%;
+        background-position: center -80px;
+    }
+
+    .section {
+        padding: 2rem 2.5rem;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .wall {
+        background-position: center -130px;
+    }
+
+    .section {
+        padding: 4rem;
+    }
+}
+
+@media screen and (min-width: 62em) {
+    .wall {
+        background-size: 115%;
+        background-position: center -130px;
+    }
+
+    .section {
+        padding: 6rem 16rem;
+    }
 }
