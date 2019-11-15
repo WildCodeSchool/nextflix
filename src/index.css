@@ -2,6 +2,7 @@
 
 :root {
     --Navbar-height: 3.125rem;
+    --body-height: calc(100vh - var(--Navbar-height));
 }
 
 html {

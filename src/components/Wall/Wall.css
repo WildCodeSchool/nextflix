@@ -1,5 +1,5 @@
 .wall {
-    height: calc(100vh - var(--Navbar-height));
+    height: var(--body-height);
     overflow-y: scroll;
     background-image: url('./background.min.jpg');
     background-size: 150%;
