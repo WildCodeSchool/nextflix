@@ -8,18 +8,16 @@ class Wall extends Component {
       videos: [],
       trailers: [],
       scrollIndex: 1,
+      displayedInfosId: null,
     };
   }
 
-
   /* titre */
-
   async componentDidMount() {
     const response = await fetch('https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&&api_key=7f077937236d1ffe1a9deeb64a9d2a38&&append_to_response=video,image');
     const data = await response.json();
 
     /* video */
-
     const promises = [];
     for (let i = 0; i < data.results.length; i++) {
       const request = fetch(`https://api.themoviedb.org/3/movie/${data.results[i].id}/videos?api_key=7f077937236d1ffe1a9deeb64a9d2a38`);
@@ -41,14 +39,17 @@ class Wall extends Component {
     const positionIndex = scrollIndex * height;
     window.scrollTo(0, positionIndex);
   }
-  /* regroupe titre video */
+
+  showInfos = (videoId) => {
+    this.setState(prevState => ({ displayedInfosId: prevState.displayedInfosId !== videoId ? videoId : null }));
+  }
 
   render() {
-    const { videos, trailers } = this.state;
+    const { videos, trailers, displayedInfosId } = this.state;
     return (
       <div className="wall">
         {videos.map((video, i) => (
-          <div className="section">
+          <div className="section" key={video.id}>
             <div className="video-container">
               <iframe
                 className="video"
@@ -58,6 +59,29 @@ class Wall extends Component {
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
+            </div>
+            <div className={`synopsis ${displayedInfosId === video.id ? "synopsis--shown" : ""}`}>
+              <button
+                type="button"
+                onClick={() => this.showInfos(video.id)}
+                className="synopsis__toggle"
+              >
+                <img
+                  className="synopsis__toggle-picture"
+                  src="https://i.imgur.com/chpPVFL.png"
+                />
+              </button>
+              <div className={`synopsis__infos ${displayedInfosId === video.id ? "synopsis__infos--shown" : ""}`}>
+                <div className="synopsis__box-picture">
+                  <img
+                    className="synopsis__picture"
+                    src={`https://image.tmdb.org/t/p/w500/${video.poster_path}`}
+                    alt={`Poster de ${video.title}`}
+                  />
+                  <p className="synopsis__release-date">Sortie le {video.release_date}</p>
+                </div>
+                <p className="synopsis__overview">{video.overview}</p>
+              </div>
             </div>
           </div>
         ))}
