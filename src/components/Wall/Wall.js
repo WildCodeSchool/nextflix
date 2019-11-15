@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Wall.css';
+import arrow from './arrow-pointing-down.png';
 
 class Wall extends Component {
   constructor(props) {
@@ -10,6 +11,8 @@ class Wall extends Component {
       scrollIndex: 1,
       displayedInfosId: null,
     };
+    this.wall = React.createRef();
+    this.section = React.createRef();
   }
 
   /* titre */
@@ -32,12 +35,16 @@ class Wall extends Component {
   }
 
   scrollMovie(direction) {
-    const num = direction === 'down' ? 1 : -1;
-    const { scrollIndex } = this.state;
-    const height = document.querySelector('.video').offsetHeight;
-    this.setState((prevState) => ({ scrollIndex: prevState.scrollIndex + num }));
-    const positionIndex = scrollIndex * height;
-    window.scrollTo(0, positionIndex);
+    const num = direction === 'next' ? 1 : -1;
+    this.setState(
+      (prevState) => ({ scrollIndex: prevState.scrollIndex + num }),
+      () => {
+        const height = this.section.current.offsetHeight;
+        const { scrollIndex } = this.state;
+        const positionIndex = scrollIndex * height;
+        this.wall.current.scrollTo(0, positionIndex);
+      }
+    );
   }
 
   showInfos = (videoId) => {
@@ -47,9 +54,9 @@ class Wall extends Component {
   render() {
     const { videos, trailers, displayedInfosId } = this.state;
     return (
-      <div className="wall">
+      <div className="wall" ref={this.wall}>
         {videos.map((video, i) => (
-          <div className="section" key={video.id}>
+          <div className="section" key={video.id} ref={i === 0 && this.section}>
             <div className="video-container">
               <iframe
                 className="video"
@@ -85,6 +92,22 @@ class Wall extends Component {
             </div>
           </div>
         ))}
+        <div className="section__controls">
+          <button
+            type="button"
+            onClick={() => this.scrollMovie('previous')}
+            className="section__control-button"
+          >
+            <img src={arrow} alt="arrow" className="section__control-icon section__control-icon--top" />
+          </button>
+          <button
+            type="button"
+            onClick={() => this.scrollMovie('next')}
+            className="section__control-button"
+          >
+            <img src={arrow} alt="arrow" className="section__control-icon" />
+          </button>
+        </div>
       </div>
     );
   }
